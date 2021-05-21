@@ -1,0 +1,26 @@
+
+<div class="container m-3">
+<div class="card" style="width: 18rem;">
+ <div class="card-body">
+ <h5 class="card-title"><%= @list.name %></h5>
+ <h3 class="card-body">
+ 
+<ul>
+ <% @list.bookmarks.each do |bookmark| %>
+ <li><%= bookmark.comment %> // 
+  <%= bookmark.movie.title %></li>
+ <% end %>
+</ul>
+ </h3>
+
+<br>
+<%= link_to "[<-]", root_path %>&nbsp;
+<%= link_to "[delete]",
+            list_path(@list),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+<%= link_to "[new bookmark]", new_list_bookmark_path(@list) %>
+<%= link_to "[new list]", new_list_path %>
+<%= link_to "[all the lists]", lists_path %>
+
+</div></div></div>

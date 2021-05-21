@@ -1,0 +1,15 @@
+
+
+<div class="container m-5">
+<div class="row">
+<div class="col mt-3">
+<h2><u><%= link_to "[+ list]", new_list_path %>&nbsp;Here are all the lists</u></h2>
+<ul class="list-group mt-3">
+<% @lists.each do |list| %>
+ <li class="list-group-item"><%= link_to list.name, list_path(list) %></li>
+<%end%>
+</ul>
+
+
+
+</div></div></div>

@@ -1,0 +1,16 @@
+
+<div class="container m-3">
+<div class="card" style="width: 18rem;">
+ <div class="card-body">
+ <h5 class="card-title"><%= @movie.title %></h5>
+<p class="card-text"><%= @movie.overview %></p>
+<br>
+<%= link_to "[<-]", root_path %>&nbsp;
+<%= link_to "[delete]",
+            movie_path(@movie),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+<%= link_to "[new bookmark]", new_list_bookmark_path(@movie) %>
+<%= link_to "[new list]", new_list_path %>
+
+</div></div></div>
