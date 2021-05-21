@@ -4,7 +4,8 @@
  <div class="card-body">
  <h5 class="card-title"><%= @list.name %></h5>
  <h3 class="card-body">
- 
+  
+ <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 <ul>
  <% @list.bookmarks.each do |bookmark| %>
  <li><%= bookmark.comment %> // 
